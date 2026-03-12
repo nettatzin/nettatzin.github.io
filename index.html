@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netta Tzin — AI Product Lead & Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================================================
+       HEADER — tab nav lives here, built by app.js
+       ==================================================== -->
+  <header id="header">
+    <div class="header-inner">
+      <nav id="tab-nav">
+        <!-- Tabs injected by app.js -->
+      </nav>
+      <button class="btn-export" onclick="window.print()">Export PDF</button>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       MAIN — each tab gets its own div, shown/hidden by app.js
+       ==================================================== -->
+  <main id="app">
+    <div id="tab-home"        class="tab-content"></div>
+    <div id="tab-strategy"    class="tab-content"></div>
+    <div id="tab-initiatives" class="tab-content"></div>
+    <div id="tab-other"       class="tab-content"></div>
+    <div id="tab-about"       class="tab-content"></div>
+    <div id="tab-contact"     class="tab-content"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© <span id="year"></span> Netta Tzin</span>
+      <span>AI Product Lead &amp; Strategist</span>
+    </div>
+  </footer>
+
+  <!-- data.js must load before app.js -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
