@@ -185,15 +185,6 @@ function renderOther() {
     <div class="tab-inner">
       <h2 class="section-heading">Other Projects</h2>
 
-      <div class="cv-banner">
-        <div>
-          <h3>Curriculum Vitae</h3>
-          <p>Full work history, roles, and experience</p>
-        </div>
-        <a href="${OTHER_PROJECTS.cvLink}" target="_blank" rel="noopener" class="btn-cv">
-          View Full CV &rarr;
-        </a>
-      </div>
 
       <h3 class="subsection-heading">Passion Projects</h3>
       <div class="cards">
