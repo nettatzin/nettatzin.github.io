@@ -6,9 +6,10 @@
 // Never touch index.html, app.js, or style.css just to update text.
 //
 // HOW TO UPDATE:
-//   - Add a new case study  → find the right tab section, copy a {} block, paste & fill in
-//   - Edit existing text    → find the title, update the description array
-//   - Change contact links  → scroll to CONTACT section at the bottom
+//   - Add a new case study  -> find the right tab section, copy a {} block, paste & fill in
+//   - Edit existing text    -> find the title, update the description array
+//   - Add a link to a card  -> add a `link: "https://..."` field to the object
+//   - Change contact links  -> scroll to CONTACT section at the bottom
 // ============================================================
 
 
@@ -23,7 +24,7 @@ const HOME = {
   title:        "AI Product Lead & Strategist",
   tagline:      "Turning complex AI capabilities into real operational systems.",
   bio:          "Multifaceted AI product leader and entrepreneur with over a decade of experience at the intersection of AI, technology, data, and arts. I build AI-driven platforms, LLM systems, and data-intensive products - translating complex capabilities into production systems that work in the real world.",
-  profileImage: "assets/images/profile.jpg",  // drop your photo here, or leave for initials fallback
+  profileImage: "assets/images/profile.jpg",
   stats: [
     { value: "10+",        label: "years in product leadership" },
     { value: "$2M+",       label: "bootstrapped at MySphera" },
@@ -61,6 +62,7 @@ const STRATEGY = {
       title:        "Case Study 2 - AI-Powered Clinical Platform",
       organization: "Healthtech Startup | MediBoard",
       role:         "Product Lead - Core, Mobile, AI Features & Clinical Workflows",
+      link:         "https://www.mediboard.co/",
       description: [
         "Led product definition and functional specification for MediBoard's transition to mobile-first, establishing the architectural foundation for role management and a multi-location specialty dashboard aggregating patient data into a real-time, physician-customized view.",
         "Beyond the core platform, I scoped and defined multiple AI-powered clinical features spanning visit and test result interpretation, a conversational patient health assistant connected to a patient's full health record, and a lab results standardization engine. The latter combined OCR, multilingual processing, and LLM-based extraction to read, translate, and normalize lab results from multiple sources, labs, and countries into a unified clinical index - accounting for naming variations, unit differences, and scale inconsistencies across providers.",
@@ -162,6 +164,7 @@ const INITIATIVES = {
       title:        "DAIRE - Democratizing AI Resources for Global Equity",
       organization: "Academic Research | Elisava School of Design & Engineering, Barcelona",
       role:         "Lead Researcher & Platform Architect - GRAILS 2025 Winner",
+      link:         "https://vo-daire.vercel.app/",
       description: [
         "DAIRE - Democratizing AI Resources for Global Equity - is a strategic intelligence platform developed as part of a Master's degree in Responsible Design in AI at Elisava, Barcelona, and selected as the winning project of GRAILS 2025 (Global Responsible Artificial Intelligence League for Students), recognized as the best project among AI ethics Master's programs internationally.",
         "The platform maps global AI resource infrastructures - computational capacity, data access, talent pipelines, and governance frameworks - to surface the structural inequities shaping who benefits from AI development and who is excluded. I designed and executed the full research methodology: landscape analysis, cross-sector resource mapping, and the development of an AI adoption readiness and organizational impact assessment framework grounded in responsible design principles.",
@@ -186,6 +189,7 @@ const INITIATIVES = {
       title:        "ML-Powered Music Intelligence & Discovery Platform",
       organization: "Music Tech | MySphera",
       role:         "Co-Founder & Head of Product",
+      link:         "https://www.hypebot.com/hypebot/2020/09/5-music-tech-startups-join-marathon-artists-labs-2020.html",
       description: [
         "Co-founded and led end-to-end product strategy for MySphera: a data-driven music intelligence platform connecting music creators and rights holders with tastemakers and digital creators through proprietary ML-based matching.",
         "The centrepiece of the platform is a proprietary in-house ML algorithm that models each tastemaker's continuously evolving musical preferences - not as a static profile, but as a dynamic, updating representation that reflects how taste shifts over time. This approach enabled discovery that remained personally relevant across changing contexts, genres, and career stages for both creators and tastemakers.",
@@ -221,6 +225,18 @@ const OTHER_PROJECTS = {
   cvLink: "https://docs.google.com/document/d/1bJyZUhsRupD_mkorQIMBNBNSewlsOCoeXyUnT8cYRIk/edit?tab=t.0",
 
   projects: [
+
+    {
+      title:        "S.P.A.C.E | Strategic Portrait of AI-Integration Contextual Evaluation",
+      role:         "Founder & Strategist",
+      link:         "https://space-strategic-ai-evaluation.lovable.app/",
+      description: [
+        "S.P.A.C.E is a methodology and tool that transforms how organizations approach AI implementation decisions. It provides a comprehensive, time-stamped strategic portrait that captures an organization's unique context - from scope, capabilities, strategy, and risks - at a specific moment, recognizing that conditions like market dynamics, team composition, and stakeholder mindset are never replicated.",
+        "Structured around a \"Strategic Solar System\" model, the process moves through nine interconnected pillars: from stakeholder atmosphere assessment and organizational foundation mapping, through process deep-dives, market intelligence, and risk/compliance/human-centric evaluations, to technical feasibility, strategic alignment, evolution planning, and actionable launch recommendations. The methodology is supported by custom-developed evaluation frameworks, including an MFAI (Meaningful & Fruitful AI) Integration score, an Environmental & Social Impact Assessment, and a Compliance & Standards evaluation - all powered by continuously updated, verified sources.",
+        "Delivered through a dual-interface system offering full transparency to stakeholders and advanced analytical capabilities for the consultant, S.P.A.C.E shifts organizational thinking from fast AI automation toward long-term, responsible, human-centric AI strategy that bridges the persistent gap between AI investment and meaningful value creation."
+      ],
+      dimensions: ["AI implementation strategy", "Organizational readiness assessment", "Responsible AI methodology", "MFAI Integration score", "Environmental & Social Impact Assessment", "Compliance & Standards evaluation", "Dual-interface platform", "Human-centric AI strategy"]
+    },
 
     {
       title:        "Reviving Iconic Board Game Through Mobile Gaming and AI",
@@ -279,9 +295,9 @@ const ABOUT = {
   ],
 
   education: [
-    { degree: "MA - Responsible Design in AI",      institution: "Elisava, Barcelona",          year: "2024–2025" },
-    { degree: "MSc - International Management",     institution: "ISCTE Business School, Lisbon", year: "2014–2016" },
-    { degree: "BSc - Industrial Engineering",       institution: "Tel Aviv University",          year: "2007–2012" }
+    { degree: "MA - Responsible Design in AI",   institution: "Elisava, Barcelona",            year: "2024–2025" },
+    { degree: "MSc - International Management",  institution: "ISCTE Business School, Lisbon", year: "2014–2016" },
+    { degree: "BSc - Industrial Engineering",    institution: "Tel Aviv University",            year: "2007–2012" }
   ],
 
   accelerators: ["Marathon-Labs", "Techstars-Barclays"],
