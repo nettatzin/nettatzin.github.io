@@ -50,7 +50,9 @@ function buildNav() {
       data-tab="${tab.id}"
       onclick="switchTab('${tab.id}')"
     >${tab.label}</button>
-  `).join('');
+  `).join('') + `
+    <a href="${OTHER_PROJECTS.cvLink}" target="_blank" rel="noopener" class="tab-btn tab-btn--cv">Full CV</a>
+  `;
 }
 
 
@@ -71,6 +73,7 @@ function renderCard(study, isPassion = false) {
         <span class="card-role">${study.role}</span>
         <h3 class="card-title">${study.title}</h3>
         ${study.organization ? `<p class="card-org">${study.organization}</p>` : ''}
+        ${study.link ? `<a href="${study.link}" target="_blank" rel="noopener" class="card-link">Visit Project &rarr;</a>` : ''}
       </div>
 
       <div class="card-body">

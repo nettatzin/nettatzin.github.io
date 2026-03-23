@@ -158,7 +158,22 @@ img { display: block; max-width: 100%; }
   border-color:  var(--accent);
 }
 
-/* Export PDF button */
+/* Full CV link in nav */
+.tab-btn--cv {
+  text-decoration: none;
+  margin-left:     0.5rem;
+  border:          1px solid var(--border);
+  color:           var(--accent);
+  font-weight:     600;
+}
+
+.tab-btn--cv:hover {
+  background:   var(--accent);
+  color:        #fff;
+  border-color: var(--accent);
+}
+
+/* Export PDF button — lives in footer */
 .btn-export {
   flex-shrink:    0;
   padding:        0.4rem 1.1rem;
@@ -405,6 +420,22 @@ img { display: block; max-width: 100%; }
   color:      var(--text-secondary);
   font-style: italic;
   margin-bottom: 0.1rem;
+}
+
+.card-link {
+  display:         inline-block;
+  margin-top:      0.5rem;
+  font-size:       0.8rem;
+  font-weight:     500;
+  color:           var(--accent-mid);
+  text-decoration: none;
+  border-bottom:   1px solid var(--tag-border);
+  transition:      color 0.2s, border-color 0.2s;
+}
+
+.card-link:hover {
+  color:        var(--accent);
+  border-color: var(--accent);
 }
 
 /* Card body */
