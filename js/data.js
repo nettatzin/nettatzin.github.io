@@ -142,6 +142,19 @@ const STRATEGY = {
         "The second system - a Content Intelligence Platform - continuously scans, analyses, classifies, and monitors government services, cloud provider documentation, and regulatory protocols to keep the recommendation engine current. Across both systems, responsible AI design was foundational: all outputs include source citations, full editing capability is maintained throughout, AI reasoning is surfaced via an explainability interface, and mandatory confirmation steps precede any committee submission."
       ],
       dimensions: ["AI product strategy", "Government technology", "Full system specification (two platforms)", "RAG & semantic search architecture", "Intelligent recommendation engine", "Hallucination detection & validation", "Government cloud compliance", "Human-in-the-loop design", "Explainable AI", "Cost estimation & phased roadmapping"]
+    },
+
+    {
+      title:        "Case Study 9 - AI-Powered Cyber Indicator & National Risk Assessment System",
+      organization: "Financial Sector National Institution | Confidential",
+      role:         "AI Product Strategist & Specification Lead",
+      description: [
+        "Led the conception, research, and product specification for a national early warning system using AI to detect non-financial sector cyber events and assess their potential cascading impact on Israel's financial system. The challenge was fundamentally cross-domain: mapping how cyber disruptions in energy, healthcare, logistics, or communications could propagate into financial instability, and building a product architecture capable of identifying this connection faster than traditional economic monitoring allows.",
+        "The work centered on translating a complex, multi-stakeholder national security problem into a structured, deliverable product. I defined the full functional and technological requirements — data collection architecture spanning security, international, and civilian information sources; an AI-powered prediction model with defined validation logic; and a five-tier severity scoring framework (Critical through Minimal) calibrated to the needs of national financial leadership.",
+        "Each milestone was scoped and sequenced: from functional requirements and source mapping through regulatory considerations, risk management strategy, and feasibility analysis comparing market solutions against in-house development.",
+        "The resulting specification describes a system capable of detecting significant cyber events as early as possible, validating them as genuine attacks, evaluating potential financial sector impact against agreed parameters and country-specific indicators, and triggering structured notifications to relevant stakeholders. The AI layer was designed for early identification — and in some cases prediction — of events before their economic impact fully materializes."
+      ],
+      dimensions: ["Product requirements definition", "AI model specification", "Cyber-to-finance risk modeling", "Multi-source information mapping", "Severity scoring framework design", "Regulatory alignment", "Feasibility analysis"]
     }
 
   ]
