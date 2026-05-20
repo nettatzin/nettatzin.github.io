@@ -20,6 +20,7 @@ const TABS = [
 ];
 
 let activeTab = 'home';
+let _productStudies = [];
 
 
 // ============================================================
@@ -153,29 +154,77 @@ function renderHome() {
   `;
 }
 
-// --- PRODUCTS & VENTURES ---
+// --- PRODUCTS & VENTURES — helpers ---
+
+function sortProducts(studies) {
+  const rank = s => s.group === 'venture' ? 0 : s.role === 'AI Product Lead' ? 1 : 2;
+  return [...studies].sort((a, b) => rank(a) - rank(b) || a.order - b.order);
+}
+
+function getProductTag(study) {
+  if (study.group === 'venture')        return { label: 'Venture',             cls: 'product-tag--venture' };
+  if (study.role === 'AI Product Lead') return { label: 'AI Product Lead',     cls: 'product-tag--lead' };
+  return                                       { label: 'AI Product Strategist', cls: 'product-tag--strategist' };
+}
+
+function renderProductCard(study, idx) {
+  const tag = getProductTag(study);
+  return `
+    <div class="product-card" onclick="openProductModal(${idx})">
+      <span class="product-tag ${tag.cls}">${tag.label}</span>
+      <h3 class="product-card-title">${study.title}</h3>
+      <p class="product-card-org">${study.organization}</p>
+      <p class="product-card-summary">${study.description[0]}</p>
+    </div>
+  `;
+}
+
+function openProductModal(idx) {
+  const study = _productStudies[idx];
+  const tag   = getProductTag(study);
+  document.getElementById('product-modal-content').innerHTML = `
+    <span class="product-tag ${tag.cls}">${tag.label}</span>
+    <h2 class="modal-title">${study.title}</h2>
+    <p class="modal-org">${study.organization}</p>
+    <p class="modal-role">${study.role}</p>
+    <div class="modal-body">
+      ${study.description.map(p => `<p>${p}</p>`).join('')}
+    </div>
+    ${study.dimensions && study.dimensions.length ? `
+      <div class="card-dims">
+        <span class="dims-label">Key Dimensions</span>
+        <div class="dims-tags">
+          ${study.dimensions.map(d => `<span class="dim-tag">${d}</span>`).join('')}
+        </div>
+      </div>
+    ` : ''}
+    ${study.link ? `<a href="${study.link}" target="_blank" rel="noopener" class="card-link" style="margin-top:1.25rem;display:inline-block">Visit Project &rarr;</a>` : ''}
+  `;
+  document.getElementById('product-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal(event) {
+  if (event && event.target.closest('.product-modal-inner')) return;
+  document.getElementById('product-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// --- PRODUCTS & VENTURES — renderer ---
 function renderProducts() {
-  const ventures = STRATEGY.caseStudies
-    .filter(s => s.group === 'venture')
-    .sort((a, b) => a.order - b.order);
-
-  const cases = STRATEGY.caseStudies
-    .filter(s => s.group === 'case-study')
-    .sort((a, b) => a.order - b.order);
-
+  _productStudies = sortProducts(STRATEGY.caseStudies);
   return `
     <div class="tab-inner">
       <h2 class="section-heading">Products &amp; Ventures</h2>
       <blockquote class="section-intro">${STRATEGY.intro}</blockquote>
-
-      <h3 class="subsection-heading">Ventures</h3>
-      <div class="cards">
-        ${ventures.map(s => renderCard(s)).join('')}
-      </div>
-
-      <h3 class="subsection-heading">Case Studies</h3>
-      <div class="cards">
-        ${cases.map(s => renderCard(s)).join('')}
+    </div>
+    <div class="product-grid">
+      ${_productStudies.map((s, i) => renderProductCard(s, i)).join('')}
+    </div>
+    <div class="product-modal" id="product-modal" onclick="closeProductModal(event)">
+      <div class="product-modal-inner">
+        <button class="product-modal-close" onclick="closeProductModal()">&#215;</button>
+        <div id="product-modal-content"></div>
       </div>
     </div>
   `;
@@ -304,6 +353,7 @@ function renderContact() {
 
 function init() {
   buildNav();
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProductModal(); });
 
   document.getElementById('tab-home').innerHTML        = renderHome();
   document.getElementById('tab-products').innerHTML    = renderProducts();
