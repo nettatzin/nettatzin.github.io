@@ -77,9 +77,23 @@ const STRATEGY = {
     {
       group:        "case-study",
       order:        1,
-      title:        "Case Study 1 - AI-Driven Expense Evaluation Platform",
+      title:        "AI-Powered Regulatory Documentation Platform",
+      organization: "Medical Device Manufacturer | Confidential",
+      role:         "AI Product Lead",
+      description: [
+        "I joined as AI Product Lead to design and own an end-to-end platform for managing the data flowing through a medical device manufacturer's regulated R&D documentation. Project data was scattered across departments and non-standardized, with the same concept described differently across documents, which drove rework, cross-reference drift, and audit risk on records under strict regulatory oversight. I owned the product across three layers.",
+        "The first was a semantic data foundation: an AI-driven layer that ingested unstandardized data from across the company and normalized it into a canonical schema engineering could reason over. The second was a cross-connection layer that learned how fields, documents, and departments related, surfacing which value in one document drove which field in another rather than treating each document as isolated.",
+        "The third was the engineer-facing surface, with two modes. An auto-fill pipeline: once an engineer named a target document, the system pulled from the semantic store, populated dependent fields, propagated already-entered values across related documents, and ran a smart-review layer that flagged missing data and low-confidence outputs. And a conversational interface: engineers could query or generate content against the secured corpus and choose which foundation model to run against. Human-in-the-loop ran throughout, nothing entered the regulatory record without engineer review."
+      ],
+      dimensions: ["End-to-end product ownership", "LLM-based document automation", "Semantic data normalization", "Cross-document relationship modeling", "Auto-fill & propagation pipeline", "Conversational AI over a secured corpus", "Confidence scoring & smart review", "Human-in-the-loop", "Regulated R&D documentation"]
+    },
+
+    {
+      group:        "case-study",
+      order:        2,
+      title:        "AI-Driven Expense Evaluation Platform",
       organization: "Global Organization | Confidential",
-      role:         "Product Strategy Lead",
+      role:         "AI Product Lead",
       description: [
         "I led the end-to-end product strategy and delivery of an AI service for a global employee management platform, designed to automatically analyze expense submissions from multiple countries at scale.",
         "The engagement started with stakeholder discovery - interviews mapping current workflows, pain points, regulatory constraints, and unmet operational needs across multiple regions. Findings were synthesized into a prioritized solution landscape, with each option assessed for effort, risk, benefit, and architectural fit. From there, I owned full product scoping, planning, and KPI definition.",
@@ -91,10 +105,10 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        2,
-      title:        "Case Study 2 - AI-Powered Clinical Platform",
+      order:        3,
+      title:        "AI-Powered Clinical Platform",
       organization: "Healthtech Startup | MediBoard",
-      role:         "Product Lead - Core, Mobile, AI Features & Clinical Workflows",
+      role:         "AI Product Lead",
       link:         "https://www.mediboard.co/",
       description: [
         "Led product definition and functional specification for MediBoard's transition to mobile-first, establishing the architectural foundation for role management and a multi-location specialty dashboard aggregating patient data into a real-time, physician-customized view.",
@@ -106,10 +120,10 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        3,
-      title:        "Case Study 3 - Grant Advisory AI Platform",
+      order:        4,
+      title:        "Grant Advisory AI Platform",
       organization: "SMB Consulting Firm | Confidential",
-      role:         "AI Product Manager & Product Strategist",
+      role:         "AI Product Lead",
       description: [
         "Led product strategy and AI integration across the full product surface of a grant submission consultancy - transforming a largely manual, expertise-heavy advisory operation into a semi-automated, AI-assisted platform. The engagement spanned four interconnected product workstreams.",
         "The AI content generation layer covered three workstreams: an automated researcher profile generator that synthesised uploaded scientific materials into complete, submission-ready profiles; AI-assisted generation of core grant narrative sections aligned to each funding body's official submission guidelines; and an automated publication and patent detection engine cross-referencing uploaded materials against validated external sources. Across all three, I owned scoping, functional specification, prompt design and iteration, validation frameworks, and the human-review layers.",
@@ -121,22 +135,23 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        4,
-      title:        "Case Study 4 - AI Strategy for Alternative Protein R&D",
-      organization: "Nonprofit Think Tank | Confidential",
-      role:         "AI Strategy Consultant & Researcher",
+      order:        5,
+      title:        "AI-Powered Cyber Indicator & National Risk Assessment System",
+      organization: "Financial Sector National Institution | Confidential",
+      role:         "AI Product Strategist",
       description: [
-        "Led AI strategy research and advisory for the organization's initiative to identify where artificial intelligence can most meaningfully advance taste, texture, and price parity in plant-based and biomass fermentation-derived alternative meats.",
-        "I designed the stakeholder interview framework for key informant interviews with experts spanning alternative protein R&D, academia, and AI applications - structuring the discovery process to surface high-impact intervention points. Alongside the stakeholder work, I conducted comprehensive patent mapping across 2020–2025, cross-industry AI innovation analysis, and an initial standardization landscape review across academic, commercial, and regulatory sources.",
-        "To give the analysis operational grounding, I built a prototype knowledge base architecture and database schema for biomass fermentation publications, modelling the automated data collection and source evaluation process. Deliverables spanned the full strategic arc: stakeholder interview guidelines and analysis synthesis, identification of key AI applications and the barriers limiting their deployment, a comprehensive data mapping and gap analysis, and two action plans each centred on an R&D sub-field where AI was assessed to offer the highest marginal improvement."
+        "Led the conception, research, and product specification for a national early warning system using AI to detect non-financial sector cyber events and assess their potential cascading impact on Israel's financial system. The challenge was fundamentally cross-domain: mapping how cyber disruptions in energy, healthcare, logistics, or communications could propagate into financial instability, and building a product architecture capable of identifying this connection faster than traditional economic monitoring allows.",
+        "The work centered on translating a complex, multi-stakeholder national security problem into a structured, deliverable product. I defined the full functional and technological requirements - data collection architecture spanning security, international, and civilian information sources; an AI-powered prediction model with defined validation logic; and a five-tier severity scoring framework (Critical through Minimal) calibrated to the needs of national financial leadership.",
+        "Each milestone was scoped and sequenced: from functional requirements and source mapping through regulatory considerations, risk management strategy, and feasibility analysis comparing market solutions against in-house development.",
+        "The resulting specification describes a system capable of detecting significant cyber events as early as possible, validating them as genuine attacks, evaluating potential financial sector impact against agreed parameters and country-specific indicators, and triggering structured notifications to relevant stakeholders. The AI layer was designed for early identification - and in some cases prediction - of events before their economic impact fully materializes."
       ],
-      dimensions: ["AI opportunity mapping", "Stakeholder interview design", "Patent & literature analysis", "Data standardization strategy", "Knowledge base architecture", "Alternative protein R&D", "Strategic roadmapping", "Cross-industry innovation research"]
+      dimensions: ["Product requirements definition", "AI model specification", "Cyber-to-finance risk modeling", "Multi-source information mapping", "Severity scoring framework design", "Regulatory alignment", "Feasibility analysis"]
     },
 
     {
       group:        "case-study",
-      order:        5,
-      title:        "Case Study 5 - Enterprise AI Adoption Platform",
+      order:        6,
+      title:        "Enterprise AI Adoption Platform",
       organization: "Public Sector | National Fund (KKL)",
       role:         "AI Product Strategist",
       description: [
@@ -149,8 +164,22 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        6,
-      title:        "Case Study 6 - AI-Powered Audience Intelligence Platform",
+      order:        7,
+      title:        "AI-Powered Government Digitization Platform",
+      organization: "Public Sector | Government Cloud Initiative (Confidential)",
+      role:         "AI Product Strategist",
+      description: [
+        "Led product strategy and full system specification for GovGuide AI - an AI-powered platform enabling government departments to transform informal digitisation project concepts into structured, committee-ready technical proposals.",
+        "I owned the full product scope across two interconnected systems. The first - GovGuide AI - provides a template-based project input portal where departments describe their digitisation initiative, and the platform automatically generates structured project objectives, technical specifications, third-party tool recommendations, stakeholder and team composition requirements, budget estimates, and architecture outlines. The recommendation engine uses semantic matching against the approved government tools catalogue, with multi-criteria ranking and explainable AI outputs. An integrated AI chat assistant, powered by RAG, allows departments to interrogate recommendations and refine their submissions.",
+        "The second system - a Content Intelligence Platform - continuously scans, analyses, classifies, and monitors government services, cloud provider documentation, and regulatory protocols to keep the recommendation engine current. Across both systems, responsible AI design was foundational: all outputs include source citations, full editing capability is maintained throughout, AI reasoning is surfaced via an explainability interface, and mandatory confirmation steps precede any committee submission."
+      ],
+      dimensions: ["AI product strategy", "Government technology", "Full system specification (two platforms)", "RAG & semantic search architecture", "Intelligent recommendation engine", "Hallucination detection & validation", "Government cloud compliance", "Human-in-the-loop design", "Explainable AI", "Cost estimation & phased roadmapping"]
+    },
+
+    {
+      group:        "case-study",
+      order:        8,
+      title:        "AI-Powered Audience Intelligence Platform",
       organization: "Major Broadcast Television Network | Confidential",
       role:         "AI Product Strategist",
       description: [
@@ -163,10 +192,10 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        7,
-      title:        "Case Study 7 - AI-Enhanced Patient Engagement & Compliance Platform",
+      order:        9,
+      title:        "AI-Enhanced Patient Engagement & Compliance Platform",
       organization: "Global Medical Device Company | Confidential",
-      role:         "AI Product Discovery Lead",
+      role:         "AI Product Strategist",
       description: [
         "Led product discovery for an AI-enhanced patient engagement and clinical transparency platform for a chronic pain rehabilitation device - translating a hardware-first product with limited digital intelligence into a data-driven, clinically connected patient journey.",
         "The engagement centred on structured stakeholder discovery across the full device ecosystem: patients, physiotherapists, physicians, and insurance representatives. Interviews mapped the complete workflow - from initial prescription through insurance approval, device setup, ongoing usage, and clinical follow-up - surfacing a set of critical unmet needs that the existing application was not addressing.",
@@ -177,31 +206,16 @@ const STRATEGY = {
 
     {
       group:        "case-study",
-      order:        8,
-      title:        "Case Study 8 - AI-Powered Government Digitization Platform",
-      organization: "Public Sector | Government Cloud Initiative (Confidential)",
-      role:         "AI Product Strategist & System Specification Lead",
+      order:        10,
+      title:        "AI Strategy for Alternative Protein R&D",
+      organization: "Nonprofit Think Tank | Confidential",
+      role:         "AI Product Strategist",
       description: [
-        "Led product strategy and full system specification for GovGuide AI - an AI-powered platform enabling government departments to transform informal digitisation project concepts into structured, committee-ready technical proposals.",
-        "I owned the full product scope across two interconnected systems. The first - GovGuide AI - provides a template-based project input portal where departments describe their digitisation initiative, and the platform automatically generates structured project objectives, technical specifications, third-party tool recommendations, stakeholder and team composition requirements, budget estimates, and architecture outlines. The recommendation engine uses semantic matching against the approved government tools catalogue, with multi-criteria ranking and explainable AI outputs. An integrated AI chat assistant, powered by RAG, allows departments to interrogate recommendations and refine their submissions.",
-        "The second system - a Content Intelligence Platform - continuously scans, analyses, classifies, and monitors government services, cloud provider documentation, and regulatory protocols to keep the recommendation engine current. Across both systems, responsible AI design was foundational: all outputs include source citations, full editing capability is maintained throughout, AI reasoning is surfaced via an explainability interface, and mandatory confirmation steps precede any committee submission."
+        "Led AI strategy research and advisory for the organization's initiative to identify where artificial intelligence can most meaningfully advance taste, texture, and price parity in plant-based and biomass fermentation-derived alternative meats.",
+        "I designed the stakeholder interview framework for key informant interviews with experts spanning alternative protein R&D, academia, and AI applications - structuring the discovery process to surface high-impact intervention points. Alongside the stakeholder work, I conducted comprehensive patent mapping across 2020–2025, cross-industry AI innovation analysis, and an initial standardization landscape review across academic, commercial, and regulatory sources.",
+        "To give the analysis operational grounding, I built a prototype knowledge base architecture and database schema for biomass fermentation publications, modelling the automated data collection and source evaluation process. Deliverables spanned the full strategic arc: stakeholder interview guidelines and analysis synthesis, identification of key AI applications and the barriers limiting their deployment, a comprehensive data mapping and gap analysis, and two action plans each centred on an R&D sub-field where AI was assessed to offer the highest marginal improvement."
       ],
-      dimensions: ["AI product strategy", "Government technology", "Full system specification (two platforms)", "RAG & semantic search architecture", "Intelligent recommendation engine", "Hallucination detection & validation", "Government cloud compliance", "Human-in-the-loop design", "Explainable AI", "Cost estimation & phased roadmapping"]
-    },
-
-    {
-      group:        "case-study",
-      order:        9,
-      title:        "Case Study 9 - AI-Powered Cyber Indicator & National Risk Assessment System",
-      organization: "Financial Sector National Institution | Confidential",
-      role:         "AI Product Strategist & Specification Lead",
-      description: [
-        "Led the conception, research, and product specification for a national early warning system using AI to detect non-financial sector cyber events and assess their potential cascading impact on Israel's financial system. The challenge was fundamentally cross-domain: mapping how cyber disruptions in energy, healthcare, logistics, or communications could propagate into financial instability, and building a product architecture capable of identifying this connection faster than traditional economic monitoring allows.",
-        "The work centered on translating a complex, multi-stakeholder national security problem into a structured, deliverable product. I defined the full functional and technological requirements - data collection architecture spanning security, international, and civilian information sources; an AI-powered prediction model with defined validation logic; and a five-tier severity scoring framework (Critical through Minimal) calibrated to the needs of national financial leadership.",
-        "Each milestone was scoped and sequenced: from functional requirements and source mapping through regulatory considerations, risk management strategy, and feasibility analysis comparing market solutions against in-house development.",
-        "The resulting specification describes a system capable of detecting significant cyber events as early as possible, validating them as genuine attacks, evaluating potential financial sector impact against agreed parameters and country-specific indicators, and triggering structured notifications to relevant stakeholders. The AI layer was designed for early identification - and in some cases prediction - of events before their economic impact fully materializes."
-      ],
-      dimensions: ["Product requirements definition", "AI model specification", "Cyber-to-finance risk modeling", "Multi-source information mapping", "Severity scoring framework design", "Regulatory alignment", "Feasibility analysis"]
+      dimensions: ["AI opportunity mapping", "Stakeholder interview design", "Patent & literature analysis", "Data standardization strategy", "Knowledge base architecture", "Alternative protein R&D", "Strategic roadmapping", "Cross-industry innovation research"]
     }
 
   ]
