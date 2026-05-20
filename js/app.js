@@ -12,7 +12,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // --- Tab definitions (order = nav order) ---
 const TABS = [
   { id: 'home',        label: 'Home'                        },
-  { id: 'strategy',   label: 'AI Product Lead & Strategist' },
+  { id: 'products',   label: 'Products & Ventures' },
   { id: 'initiatives',label: 'AI Initiatives'               },
   { id: 'other',      label: 'Other Projects'               },
   { id: 'about',      label: 'About'                        },
@@ -153,14 +153,29 @@ function renderHome() {
   `;
 }
 
-// --- STRATEGY ---
-function renderStrategy() {
+// --- PRODUCTS & VENTURES ---
+function renderProducts() {
+  const ventures = STRATEGY.caseStudies
+    .filter(s => s.group === 'venture')
+    .sort((a, b) => a.order - b.order);
+
+  const cases = STRATEGY.caseStudies
+    .filter(s => s.group === 'case-study')
+    .sort((a, b) => a.order - b.order);
+
   return `
     <div class="tab-inner">
-      <h2 class="section-heading">AI Product Lead &amp; Strategist</h2>
+      <h2 class="section-heading">Products &amp; Ventures</h2>
       <blockquote class="section-intro">${STRATEGY.intro}</blockquote>
+
+      <h3 class="subsection-heading">Ventures</h3>
       <div class="cards">
-        ${STRATEGY.caseStudies.map(s => renderCard(s)).join('')}
+        ${ventures.map(s => renderCard(s)).join('')}
+      </div>
+
+      <h3 class="subsection-heading">Case Studies</h3>
+      <div class="cards">
+        ${cases.map(s => renderCard(s)).join('')}
       </div>
     </div>
   `;
@@ -291,7 +306,7 @@ function init() {
   buildNav();
 
   document.getElementById('tab-home').innerHTML        = renderHome();
-  document.getElementById('tab-strategy').innerHTML    = renderStrategy();
+  document.getElementById('tab-products').innerHTML    = renderProducts();
   document.getElementById('tab-initiatives').innerHTML = renderInitiatives();
   document.getElementById('tab-other').innerHTML       = renderOther();
   document.getElementById('tab-about').innerHTML       = renderAbout();

@@ -36,16 +36,47 @@ const HOME = {
 
 
 // ============================================================
-// TAB: AI PRODUCT LEAD & STRATEGIST
+// TAB: PRODUCTS & VENTURES
 // ============================================================
 
 const STRATEGY = {
 
-  intro: "I lead the end-to-end definition and delivery of scalable AI production systems, translating complex organizational workflows into high-impact products. My expertise spans architecting LLM-enabled platforms, implementing rigorous model benchmarking, and embedding responsible AI governance directly into operational environments.",
+  intro: "I build and lead AI products end to end - from founding and scaling my own ventures to delivering production AI systems for clients across healthcare, fintech, public sector, and enterprise. The work below spans both: companies I co-founded and products I led for clients.",
 
   caseStudies: [
 
+    // ---- VENTURES ----
+
     {
+      group:        "venture",
+      order:        1,
+      title:        "ML-Powered Discovery & Matching Platform",
+      organization: "MySphera | Co-founded and bootstrapped to $2M+",
+      role:         "CO-FOUNDER & HEAD OF PRODUCT",
+      description: [
+        "I co-founded MySphera and owned product end to end, from data ingestion through UX, experimentation, and iteration. I co-designed the in-house machine-learning model at its core, which models each user's continuously evolving preferences as a live, updating signal rather than a static profile, so matching stays relevant as behavior and context shift over time.",
+        "The platform served two very different groups at once, creators and rights holders alongside tastemakers and digital creators, so every product decision had to create value for both. I bootstrapped the company to $2M+ in revenue with no external funding, scaling to a global network of 45,000+ rights holders and 3,000+ tastemakers, and was selected for the Marathon-Labs accelerator. The domain was music; the work was building and scaling a data product people relied on daily."
+      ],
+      dimensions: ["End-to-end product ownership", "In-house ML model design", "Dynamic preference modeling", "Recommendation & matching", "Multi-sided product", "Data ingestion & pipeline design", "Bootstrapped growth", "UX & experimentation"]
+    },
+
+    {
+      group:        "venture",
+      order:        2,
+      title:        "NLP-Driven Conversational AI for Insurance",
+      organization: "LeO | Founding team, Techstars-Barclays",
+      role:         "FOUNDING TEAM & HEAD OF PRODUCT",
+      description: [
+        "As part of the founding team and head of product, I led development of an NLP-driven conversational AI assistant for the insurance industry, automating sales and customer interactions. I designed the conversational flows, intent modeling, and learning loops, and translated business requirements into model requirements and product logic alongside engineering. I led the design and rollout of an automated integration with a major insurance carrier, taking the product into a real production environment. LeO was a Techstars-Barclays accelerator company."
+      ],
+      dimensions: ["NLP & conversational AI", "Intent modeling", "Conversational flow design", "Learning loops", "B2B product", "Carrier integration", "Production rollout", "Founding team"]
+    },
+
+    // ---- CASE STUDIES ----
+
+    {
+      group:        "case-study",
+      order:        1,
       title:        "Case Study 1 - AI-Driven Expense Evaluation Platform",
       organization: "Global Organization | Confidential",
       role:         "Product Strategy Lead",
@@ -59,6 +90,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        2,
       title:        "Case Study 2 - AI-Powered Clinical Platform",
       organization: "Healthtech Startup | MediBoard",
       role:         "Product Lead - Core, Mobile, AI Features & Clinical Workflows",
@@ -72,6 +105,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        3,
       title:        "Case Study 3 - Grant Advisory AI Platform",
       organization: "SMB Consulting Firm | Confidential",
       role:         "AI Product Manager & Product Strategist",
@@ -85,6 +120,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        4,
       title:        "Case Study 4 - AI Strategy for Alternative Protein R&D",
       organization: "Nonprofit Think Tank | Confidential",
       role:         "AI Strategy Consultant & Researcher",
@@ -97,6 +134,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        5,
       title:        "Case Study 5 - Enterprise AI Adoption Platform",
       organization: "Public Sector | National Fund (KKL)",
       role:         "AI Product Strategist",
@@ -109,6 +148,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        6,
       title:        "Case Study 6 - AI-Powered Audience Intelligence Platform",
       organization: "Major Broadcast Television Network | Confidential",
       role:         "AI Product Strategist",
@@ -121,6 +162,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        7,
       title:        "Case Study 7 - AI-Enhanced Patient Engagement & Compliance Platform",
       organization: "Global Medical Device Company | Confidential",
       role:         "AI Product Discovery Lead",
@@ -133,6 +176,8 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        8,
       title:        "Case Study 8 - AI-Powered Government Digitization Platform",
       organization: "Public Sector | Government Cloud Initiative (Confidential)",
       role:         "AI Product Strategist & System Specification Lead",
@@ -145,14 +190,16 @@ const STRATEGY = {
     },
 
     {
+      group:        "case-study",
+      order:        9,
       title:        "Case Study 9 - AI-Powered Cyber Indicator & National Risk Assessment System",
       organization: "Financial Sector National Institution | Confidential",
       role:         "AI Product Strategist & Specification Lead",
       description: [
         "Led the conception, research, and product specification for a national early warning system using AI to detect non-financial sector cyber events and assess their potential cascading impact on Israel's financial system. The challenge was fundamentally cross-domain: mapping how cyber disruptions in energy, healthcare, logistics, or communications could propagate into financial instability, and building a product architecture capable of identifying this connection faster than traditional economic monitoring allows.",
-        "The work centered on translating a complex, multi-stakeholder national security problem into a structured, deliverable product. I defined the full functional and technological requirements — data collection architecture spanning security, international, and civilian information sources; an AI-powered prediction model with defined validation logic; and a five-tier severity scoring framework (Critical through Minimal) calibrated to the needs of national financial leadership.",
+        "The work centered on translating a complex, multi-stakeholder national security problem into a structured, deliverable product. I defined the full functional and technological requirements - data collection architecture spanning security, international, and civilian information sources; an AI-powered prediction model with defined validation logic; and a five-tier severity scoring framework (Critical through Minimal) calibrated to the needs of national financial leadership.",
         "Each milestone was scoped and sequenced: from functional requirements and source mapping through regulatory considerations, risk management strategy, and feasibility analysis comparing market solutions against in-house development.",
-        "The resulting specification describes a system capable of detecting significant cyber events as early as possible, validating them as genuine attacks, evaluating potential financial sector impact against agreed parameters and country-specific indicators, and triggering structured notifications to relevant stakeholders. The AI layer was designed for early identification — and in some cases prediction — of events before their economic impact fully materializes."
+        "The resulting specification describes a system capable of detecting significant cyber events as early as possible, validating them as genuine attacks, evaluating potential financial sector impact against agreed parameters and country-specific indicators, and triggering structured notifications to relevant stakeholders. The AI layer was designed for early identification - and in some cases prediction - of events before their economic impact fully materializes."
       ],
       dimensions: ["Product requirements definition", "AI model specification", "Cyber-to-finance risk modeling", "Multi-source information mapping", "Severity scoring framework design", "Regulatory alignment", "Feasibility analysis"]
     }
