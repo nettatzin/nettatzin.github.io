@@ -302,9 +302,9 @@ const ABOUT = {
   profileImage: "assets/images/profile.jpg",
 
   bio: [
-    "I'm a multifaceted AI product leader, strategist, and entrepreneur with over a decade of experience at the intersection of AI, technology, data, and arts.",
-    "My work is focused on AI-driven platforms, LLM systems, and data-intensive products. Experienced in translating complex AI capabilities into production systems embedded in operational workflows across public and private sectors.",
-    "I hold a Master's in Responsible Design in AI (Elisava, Barcelona), an MSc in International Management (ISCTE, Lisbon), and a BSc in Industrial & Management Engineering (Tel Aviv University)."
+    "I'm an AI product leader, strategist, and entrepreneur with 12+ years building AI-driven products end to end, from early discovery and model evaluation through architecture and production deployment.",
+    "My work centers on LLM systems and data-intensive platforms that have to hold up in real operational environments, across healthcare, fintech, public sector, and B2B SaaS. I've delivered 10+ AI products for organizations ranging from a few dozen users to thousands, and I co-founded MySphera, a data-driven platform I bootstrapped to $2M+ in revenue.",
+    "My Master's in Responsible Design in AI (Elisava, Barcelona) anchors how I build: evaluation, explainability, and human-in-the-loop design as core requirements rather than afterthoughts. During the program, my DAIRE project won GRAILS 2025, recognized as the best AI ethics Master's project internationally. I also hold an MSc in International Management (ISCTE, Lisbon) and a BSc in Industrial & Management Engineering (Tel Aviv University)."
   ],
 
   education: [
