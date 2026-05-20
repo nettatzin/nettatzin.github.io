@@ -954,7 +954,6 @@ footer .container {
     border:          none;
     cursor:          pointer;
     padding:         0.5rem;
-    margin-left:     auto;
     flex-shrink:     0;
     z-index:         201;
   }
