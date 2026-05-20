@@ -225,85 +225,22 @@ const STRATEGY = {
 
 
 // ============================================================
-// TAB: AI INITIATIVES
+// TAB: AI INITIATIVES & PROJECTS
 // ============================================================
 
 const INITIATIVES = {
 
   intro: "As an entrepreneur, researcher, and enabler, I bridge the gap between AI and cultural, geopolitical, educational, and sustainable causes to enable responsible AI implementations.",
 
-  caseStudies: [
+  items: [
 
     {
-      title:        "DAIRE - Democratizing AI Resources for Global Equity",
-      organization: "Academic Research | Elisava School of Design & Engineering, Barcelona",
-      role:         "Lead Researcher & Platform Architect - GRAILS 2025 Winner",
-      link:         "https://vo-daire.vercel.app/",
-      description: [
-        "DAIRE - Democratizing AI Resources for Global Equity - is a strategic intelligence platform developed as part of a Master's degree in Responsible Design in AI at Elisava, Barcelona, and selected as the winning project of GRAILS 2025 (Global Responsible Artificial Intelligence League for Students), recognized as the best project among AI ethics Master's programs internationally.",
-        "The platform maps global AI resource infrastructures - computational capacity, data access, talent pipelines, and governance frameworks - to surface the structural inequities shaping who benefits from AI development and who is excluded. I designed and executed the full research methodology: landscape analysis, cross-sector resource mapping, and the development of an AI adoption readiness and organizational impact assessment framework grounded in responsible design principles.",
-        "The methodology was built to be operationally applicable, not only academically rigorous - and has since been deployed in real-world AI transformation projects across public and private sector organizations."
-      ],
-      dimensions: ["AI equity & governance", "Global resource mapping", "Adoption readiness frameworks", "Organizational impact assessment", "Responsible AI design", "Academic & applied research", "Strategic intelligence platform design", "International recognition (GRAILS 2025)"]
-    },
-
-    {
-      title:        "AI-Driven Exhibition Engagement & Community Matching Platform",
-      organization: "Cultural Institution | Design Museum Holon - \"The Circle\" Exhibition",
-      role:         "AI Product Lead",
-      description: [
-        "Led product design and AI architecture for an intelligent engagement platform built around \"The Circle,\" a circular design and sustainability exhibition at the Design Museum Holon - extending the exhibition's impact from a single visit into ongoing, real-world community participation.",
-        "I designed a fully automated pipeline - from exhibition knowledge base curation and multi-platform social discovery (Facebook, Instagram, Twitter, Google Search) through AI-powered content validation, semantic tagging, and weighted artwork-to-activity matching. Each artwork was catalogued across multiple semantic dimensions, and discovered activities were matched using a custom weighted scoring algorithm spanning values alignment, material resonance, process similarity, theme overlap, and emotional resonance.",
-        "The AI stack is built on n8n for workflow orchestration, Apify for automated multi-platform web scraping, and Claude API for content validation, semantic tagging, match reasoning, and description generation. I defined the full system architecture across seven phases, the confidence scoring model, the cost structure (~$60–100/month for the entire pipeline), and the human curation touchpoints maintaining quality across the recommendation flow."
-      ],
-      dimensions: ["AI product strategy", "Exhibition intelligence systems", "Semantic matching algorithm design", "Multi-platform social discovery (Apify)", "LLM-powered content processing (Claude API)", "Workflow automation (n8n)", "Bilingual NLP (Hebrew/English)", "Personalization engine", "Human-in-the-loop design"]
-    },
-
-    {
-      title:        "ML-Powered Music Intelligence & Discovery Platform",
-      organization: "Music Tech | MySphera",
-      role:         "Co-Founder & Head of Product",
-      link:         "https://www.hypebot.com/hypebot/2020/09/5-music-tech-startups-join-marathon-artists-labs-2020.html",
-      description: [
-        "Co-founded and led end-to-end product strategy for MySphera: a data-driven music intelligence platform connecting music creators and rights holders with tastemakers and digital creators through proprietary ML-based matching.",
-        "The centrepiece of the platform is a proprietary in-house ML algorithm that models each tastemaker's continuously evolving musical preferences - not as a static profile, but as a dynamic, updating representation that reflects how taste shifts over time. This approach enabled discovery that remained personally relevant across changing contexts, genres, and career stages for both creators and tastemakers.",
-        "Building bootstrapped and scaling without external funding, MySphera reached $2M+ in revenue with a global network of 45,000+ music rights holders and 3,000+ tastemakers and digital creators, and was selected for the Marathon-Labs accelerator programme."
-      ],
-      dimensions: ["ML-based recommendation system design", "Dynamic preference modelling", "Music intelligence platform", "Data ingestion & pipeline design", "End-to-end product ownership", "Marketplace product design", "B2B2C platform scaling", "UX design & iteration", "Bootstrapped growth"]
-    },
-
-    {
-      title:        "AI Mapping of a Deceased Artist's Digital Archive",
-      organization: "Cultural Heritage & Arts Foundation | Dorit Feldman Foundation",
-      role:         "AI Strategist & Experience Designer",
-      description: [
-        "Led the AI strategy and mapping architecture for the digital archive of Dorit Feldman (1956–2020), a prominent multi-disciplinary artist whose practice spanned conceptual art, land art, and body art - continuously expanding visual language. Feldman's body of work is unusually dense with reference and connection: her layered works draw on literature, philosophy, scientific research, geography, bodily movement, and material culture.",
-        "The work centred on mapping multiple source layers - direct sources (Feldman's own works, materials, processes, and statements) and indirect sources (the referenced texts, philosophical frameworks, scientific concepts, and geographical sites) - using AI tools to identify, structure, and surface the connections between them. This required designing a multi-source integration architecture capable of holding heterogeneous content types, and building the semantic mapping layer that reveals the connective tissue across them.",
-        "The envisioned outcome is an immersive, physical watching-and-interacting room where each visitor creates their own singular journey - guided by their interests and curiosities rather than a fixed curatorial path. The AI layer enables this by personalising the discovery experience in real time: surfacing connections that resonate with where each visitor has wandered."
-      ],
-      dimensions: ["Digital archive strategy & structuring", "Multi-source knowledge integration", "Semantic mapping & connection discovery", "Knowledge graph design", "AI-powered personalised exploration", "Immersive experience design", "Multi-modal content processing", "Cultural heritage & digital preservation"]
-    }
-
-  ]
-};
-
-
-
-
-// ============================================================
-// TAB: OTHER PROJECTS
-// ============================================================
-
-const OTHER_PROJECTS = {
-
-  cvLink: "https://docs.google.com/document/d/1bJyZUhsRupD_mkorQIMBNBNSewlsOCoeXyUnT8cYRIk/edit?tab=t.0",
-
-  projects: [
-
-    {
+      group:        "initiative",
+      order:        1,
       title:        "S.P.A.C.E | Strategic Portrait of AI-Integration Contextual Evaluation",
       role:         "Founder & Strategist",
       link:         "https://space-strategic-ai-evaluation.lovable.app/",
+      summary:      "A methodology and tool that gives organizations a time-stamped strategic portrait of their readiness for responsible AI integration.",
       description: [
         "S.P.A.C.E is a methodology and tool that transforms how organizations approach AI implementation decisions. It provides a comprehensive, time-stamped strategic portrait that captures an organization's unique context - from scope, capabilities, strategy, and risks - at a specific moment, recognizing that conditions like market dynamics, team composition, and stakeholder mindset are never replicated.",
         "Structured around a \"Strategic Solar System\" model, the process moves through nine interconnected pillars: from stakeholder atmosphere assessment and organizational foundation mapping, through process deep-dives, market intelligence, and risk/compliance/human-centric evaluations, to technical feasibility, strategic alignment, evolution planning, and actionable launch recommendations. The methodology is supported by custom-developed evaluation frameworks, including an MFAI (Meaningful & Fruitful AI) Integration score, an Environmental & Social Impact Assessment, and a Compliance & Standards evaluation - all powered by continuously updated, verified sources.",
@@ -313,9 +250,58 @@ const OTHER_PROJECTS = {
     },
 
     {
+      group:        "initiative",
+      order:        2,
+      title:        "DAIRE - Democratizing AI Resources for Global Equity",
+      organization: "Academic Research | Elisava School of Design & Engineering, Barcelona",
+      role:         "Lead Researcher & Platform Architect - GRAILS 2025 Winner",
+      link:         "https://vo-daire.vercel.app/",
+      summary:      "A GRAILS 2025-winning strategic intelligence platform mapping global AI infrastructure to expose the structural inequities in who benefits from AI.",
+      description: [
+        "DAIRE - Democratizing AI Resources for Global Equity - is a strategic intelligence platform developed as part of a Master's degree in Responsible Design in AI at Elisava, Barcelona, and selected as the winning project of GRAILS 2025 (Global Responsible Artificial Intelligence League for Students), recognized as the best project among AI ethics Master's programs internationally.",
+        "The platform maps global AI resource infrastructures - computational capacity, data access, talent pipelines, and governance frameworks - to surface the structural inequities shaping who benefits from AI development and who is excluded. I designed and executed the full research methodology: landscape analysis, cross-sector resource mapping, and the development of an AI adoption readiness and organizational impact assessment framework grounded in responsible design principles.",
+        "The methodology was built to be operationally applicable, not only academically rigorous - and has since been deployed in real-world AI transformation projects across public and private sector organizations."
+      ],
+      dimensions: ["AI equity & governance", "Global resource mapping", "Adoption readiness frameworks", "Organizational impact assessment", "Responsible AI design", "Academic & applied research", "Strategic intelligence platform design", "International recognition (GRAILS 2025)"]
+    },
+
+    {
+      group:        "initiative",
+      order:        3,
+      title:        "AI-Driven Exhibition Engagement & Community Matching Platform",
+      organization: "Cultural Institution | Design Museum Holon - \"The Circle\" Exhibition",
+      role:         "AI Product Lead",
+      summary:      "An AI engagement platform that extends a sustainability exhibition at Design Museum Holon into ongoing, real-world community participation.",
+      description: [
+        "Led product design and AI architecture for an intelligent engagement platform built around \"The Circle,\" a circular design and sustainability exhibition at the Design Museum Holon - extending the exhibition's impact from a single visit into ongoing, real-world community participation.",
+        "I designed a fully automated pipeline - from exhibition knowledge base curation and multi-platform social discovery (Facebook, Instagram, Twitter, Google Search) through AI-powered content validation, semantic tagging, and weighted artwork-to-activity matching. Each artwork was catalogued across multiple semantic dimensions, and discovered activities were matched using a custom weighted scoring algorithm spanning values alignment, material resonance, process similarity, theme overlap, and emotional resonance.",
+        "The AI stack is built on n8n for workflow orchestration, Apify for automated multi-platform web scraping, and Claude API for content validation, semantic tagging, match reasoning, and description generation. I defined the full system architecture across seven phases, the confidence scoring model, the cost structure (~$60–100/month for the entire pipeline), and the human curation touchpoints maintaining quality across the recommendation flow."
+      ],
+      dimensions: ["AI product strategy", "Exhibition intelligence systems", "Semantic matching algorithm design", "Multi-platform social discovery (Apify)", "LLM-powered content processing (Claude API)", "Workflow automation (n8n)", "Bilingual NLP (Hebrew/English)", "Personalization engine", "Human-in-the-loop design"]
+    },
+
+    {
+      group:        "initiative",
+      order:        4,
+      title:        "AI Mapping of a Deceased Artist's Digital Archive",
+      organization: "Cultural Heritage & Arts Foundation | Dorit Feldman Foundation",
+      role:         "AI Strategist & Experience Designer",
+      summary:      "An AI mapping strategy for a late artist's digital archive, surfacing the connections across her work for immersive, personalized exploration.",
+      description: [
+        "Led the AI strategy and mapping architecture for the digital archive of Dorit Feldman (1956–2020), a prominent multi-disciplinary artist whose practice spanned conceptual art, land art, and body art - continuously expanding visual language. Feldman's body of work is unusually dense with reference and connection: her layered works draw on literature, philosophy, scientific research, geography, bodily movement, and material culture.",
+        "The work centred on mapping multiple source layers - direct sources (Feldman's own works, materials, processes, and statements) and indirect sources (the referenced texts, philosophical frameworks, scientific concepts, and geographical sites) - using AI tools to identify, structure, and surface the connections between them. This required designing a multi-source integration architecture capable of holding heterogeneous content types, and building the semantic mapping layer that reveals the connective tissue across them.",
+        "The envisioned outcome is an immersive, physical watching-and-interacting room where each visitor creates their own singular journey - guided by their interests and curiosities rather than a fixed curatorial path. The AI layer enables this by personalising the discovery experience in real time: surfacing connections that resonate with where each visitor has wandered."
+      ],
+      dimensions: ["Digital archive strategy & structuring", "Multi-source knowledge integration", "Semantic mapping & connection discovery", "Knowledge graph design", "AI-powered personalised exploration", "Immersive experience design", "Multi-modal content processing", "Cultural heritage & digital preservation"]
+    },
+
+    {
+      group:        "project",
+      order:        5,
       title:        "Reviving Iconic Board Game Through Mobile Gaming and AI",
-      role:         "Project Lead & AI Designer",
       organization: "Ephraim Kishon Archive & Game Designers",
+      role:         "Project Lead & AI Designer",
+      summary:      "An AI-driven mobile adaptation of Ephraim Kishon's 1960s satirical board game about bureaucracy.",
       description: [
         "Adapting Ephraim Kishon's 1960s satirical board game \"Package Arrived\" into a captivating mobile experience. The game's premise revolved around the absurd odyssey required to retrieve a package from abroad - a biting satire of Israel's bureaucracy at the time.",
         "Using AI narrative tools to reimagine the core bureaucratic nightmare into an engaging narrative-driven adventure that captures its satirical spirit through today's technology landscape and government processes. Presented at the Annual Comedy Festival named after Kishon."
@@ -324,9 +310,12 @@ const OTHER_PROJECTS = {
     },
 
     {
+      group:        "project",
+      order:        6,
       title:        "Operation Restart",
-      role:         "Founding Member & Digital Rights Activist",
       organization: "Digital Rights Collective",
+      role:         "Founding Member & Digital Rights Activist",
+      summary:      "Founding member of a digital-rights collective pressing legislators for transparency, privacy, and free speech online.",
       description: [
         "During 2020–2021, I was a founding member of a group of digital rights activists, following the events in the social media arena. We felt that the digital acceleration in the last 20 years continues to enlarge social, cultural, and financial gaps - creating a reality that justice institutions and parliaments are incapable, and reluctant, to deal with.",
         "We teamed with NGOs, Academics, and Activists from around the globe to raise awareness among end users and pressure legislators to prioritize regulation securing transparency, privacy, and freedom of speech."
@@ -335,9 +324,12 @@ const OTHER_PROJECTS = {
     },
 
     {
+      group:        "project",
+      order:        7,
       title:        "International Synthesizer Day",
-      role:         "Founding Organizer",
       organization: "Music Innovation Community",
+      role:         "Founding Organizer",
+      summary:      "Co-founded a global day celebrating synthesizer culture and Bob Moog, since adopted by the Moog Foundation.",
       description: [
         "In 2017, I was part of a group of music enthusiasts who wished to honor Bob Moog and his profound contribution to music by inventing the Moog Synthesizer. We established an international day, celebrated all over the world on May 23rd - Bob Moog's birthday.",
         "Since its establishment, International Synthesizer Day has gained global recognition, adopted by the Moog Foundation and other acclaimed institutions, joining together music lovers worldwide to celebrate creativity, music, and innovation."
@@ -346,6 +338,17 @@ const OTHER_PROJECTS = {
     }
 
   ]
+};
+
+
+
+
+// ============================================================
+// CV LINK (used by nav)
+// ============================================================
+
+const OTHER_PROJECTS = {
+  cvLink: "https://docs.google.com/document/d/1bJyZUhsRupD_mkorQIMBNBNSewlsOCoeXyUnT8cYRIk/edit?tab=t.0"
 };
 
 

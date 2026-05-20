@@ -12,15 +12,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // --- Tab definitions (order = nav order) ---
 const TABS = [
   { id: 'home',        label: 'Home'                        },
-  { id: 'products',   label: 'Products & Ventures' },
-  { id: 'initiatives',label: 'AI Initiatives'               },
-  { id: 'other',      label: 'Other Projects'               },
+  { id: 'products',   label: 'Products & Ventures'          },
+  { id: 'initiatives',label: 'AI Initiatives & Projects'    },
   { id: 'about',      label: 'About'                        },
   { id: 'contact',    label: 'Contact'                      }
 ];
 
 let activeTab = 'home';
 let _productStudies = [];
+let _initiativeStudies = [];
 
 
 // ============================================================
@@ -112,6 +112,59 @@ function toggleCard(id) {
   btn.innerHTML = isOpen
     ? 'Show Full Project <span class="toggle-icon">↓</span>'
     : 'Show Less <span class="toggle-icon">↑</span>';
+}
+
+
+// ============================================================
+// INITIATIVE HELPERS (used by AI Initiatives & Projects tab)
+// ============================================================
+
+function getInitiativeTag(item) {
+  if (item.group === 'initiative') return { label: 'AI Initiative', cls: 'product-tag--initiative' };
+  return                                  { label: 'Project',        cls: 'product-tag--project' };
+}
+
+function renderInitiativeCard(item, idx) {
+  const tag = getInitiativeTag(item);
+  return `
+    <div class="product-card" onclick="openInitiativeModal(${idx})">
+      <span class="product-tag ${tag.cls}">${tag.label}</span>
+      <h3 class="product-card-title">${item.title}</h3>
+      ${item.organization ? `<p class="product-card-org">${item.organization}</p>` : ''}
+      <p class="product-card-summary">${item.summary}</p>
+    </div>
+  `;
+}
+
+function openInitiativeModal(idx) {
+  const item = _initiativeStudies[idx];
+  const tag  = getInitiativeTag(item);
+  document.getElementById('initiative-modal-content').innerHTML = `
+    <span class="product-tag ${tag.cls}">${tag.label}</span>
+    <h2 class="modal-title">${item.title}</h2>
+    ${item.organization ? `<p class="modal-org">${item.organization}</p>` : ''}
+    <p class="modal-role">${item.role}</p>
+    <div class="modal-body">
+      ${item.description.map(p => `<p>${p}</p>`).join('')}
+    </div>
+    ${item.dimensions && item.dimensions.length ? `
+      <div class="card-dims">
+        <span class="dims-label">Key Dimensions</span>
+        <div class="dims-tags">
+          ${item.dimensions.map(d => `<span class="dim-tag">${d}</span>`).join('')}
+        </div>
+      </div>
+    ` : ''}
+    ${item.link ? `<a href="${item.link}" target="_blank" rel="noopener" class="card-link" style="margin-top:1.25rem;display:inline-block">Visit Project &rarr;</a>` : ''}
+  `;
+  document.getElementById('initiative-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeInitiativeModal(event) {
+  if (event && event.target.closest('.product-modal-inner')) return;
+  document.getElementById('initiative-modal').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 
@@ -232,27 +285,19 @@ function renderProducts() {
 
 // --- INITIATIVES ---
 function renderInitiatives() {
+  _initiativeStudies = [...INITIATIVES.items].sort((a, b) => a.order - b.order);
   return `
     <div class="tab-inner">
-      <h2 class="section-heading">AI Initiatives</h2>
+      <h2 class="section-heading">AI Initiatives &amp; Projects</h2>
       <blockquote class="section-intro">${INITIATIVES.intro}</blockquote>
-      <div class="cards">
-        ${INITIATIVES.caseStudies.map(s => renderCard(s)).join('')}
-      </div>
     </div>
-  `;
-}
-
-// --- OTHER PROJECTS ---
-function renderOther() {
-  return `
-    <div class="tab-inner">
-      <h2 class="section-heading">Other Projects</h2>
-
-
-      <h3 class="subsection-heading">Passion Projects</h3>
-      <div class="cards">
-        ${OTHER_PROJECTS.projects.map(p => renderCard(p, true)).join('')}
+    <div class="product-grid">
+      ${_initiativeStudies.map((s, i) => renderInitiativeCard(s, i)).join('')}
+    </div>
+    <div class="product-modal" id="initiative-modal" onclick="closeInitiativeModal(event)">
+      <div class="product-modal-inner">
+        <button class="product-modal-close" onclick="closeInitiativeModal()">&#215;</button>
+        <div id="initiative-modal-content"></div>
       </div>
     </div>
   `;
@@ -353,12 +398,11 @@ function renderContact() {
 
 function init() {
   buildNav();
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProductModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeProductModal(); closeInitiativeModal(); } });
 
   document.getElementById('tab-home').innerHTML        = renderHome();
   document.getElementById('tab-products').innerHTML    = renderProducts();
   document.getElementById('tab-initiatives').innerHTML = renderInitiatives();
-  document.getElementById('tab-other').innerHTML       = renderOther();
   document.getElementById('tab-about').innerHTML       = renderAbout();
   document.getElementById('tab-contact').innerHTML     = renderContact();
 
