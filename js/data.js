@@ -23,7 +23,7 @@ const HOME = {
   name:         "Netta Tzin",
   title:        "AI Product Lead & Strategist",
   tagline:      "Turning complex AI capabilities into real operational systems.",
-  bio:          "Multifaceted AI product leader and entrepreneur with over a decade of experience at the intersection of AI, technology, data, and arts. I build AI-driven platforms, LLM systems, and data-intensive products - translating complex capabilities into production systems that work in the real world.",
+  bio:          "AI product leader and entrepreneur with 12+ years building AI-driven products end to end, from discovery and model evaluation through architecture and production deployment. I've delivered LLM systems and data-intensive platforms across a broad range of industries, from consumer products to regulated enterprise and public-sector environments where responsible AI, governance, and compliance are built into the product from the start.",
   profileImage: "assets/images/profile.jpg",
   stats: [
     { value: "10+",        label: "years in product leadership" },
