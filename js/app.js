@@ -30,6 +30,11 @@ let _initiativeStudies = [];
 function switchTab(id) {
   activeTab = id;
 
+  // Close mobile nav if open
+  document.getElementById('tab-nav').classList.remove('open');
+  const hamburger = document.getElementById('nav-hamburger');
+  if (hamburger) hamburger.classList.remove('open');
+
   // Show/hide content panels
   document.querySelectorAll('.tab-content').forEach(el => {
     el.classList.toggle('active', el.id === 'tab-' + id);
@@ -41,6 +46,11 @@ function switchTab(id) {
   });
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleMobileNav() {
+  document.getElementById('tab-nav').classList.toggle('open');
+  document.getElementById('nav-hamburger').classList.toggle('open');
 }
 
 function buildNav() {
@@ -267,10 +277,8 @@ function closeProductModal(event) {
 function renderProducts() {
   _productStudies = sortProducts(STRATEGY.caseStudies);
   return `
-    <div class="tab-inner">
-      <h2 class="section-heading">Products &amp; Ventures</h2>
-      <blockquote class="section-intro">${STRATEGY.intro}</blockquote>
-    </div>
+    <h2 class="section-heading">Products &amp; Ventures</h2>
+    <blockquote class="section-intro">${STRATEGY.intro}</blockquote>
     <div class="product-grid">
       ${_productStudies.map((s, i) => renderProductCard(s, i)).join('')}
     </div>
@@ -287,10 +295,8 @@ function renderProducts() {
 function renderInitiatives() {
   _initiativeStudies = [...INITIATIVES.items].sort((a, b) => a.order - b.order);
   return `
-    <div class="tab-inner">
-      <h2 class="section-heading">AI Initiatives &amp; Projects</h2>
-      <blockquote class="section-intro">${INITIATIVES.intro}</blockquote>
-    </div>
+    <h2 class="section-heading">AI Initiatives &amp; Projects</h2>
+    <blockquote class="section-intro">${INITIATIVES.intro}</blockquote>
     <div class="product-grid">
       ${_initiativeStudies.map((s, i) => renderInitiativeCard(s, i)).join('')}
     </div>

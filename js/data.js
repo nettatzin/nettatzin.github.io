@@ -26,7 +26,7 @@ const HOME = {
   bio:          "AI product leader and entrepreneur with 12+ years building AI-driven products end to end, from discovery and model evaluation through architecture and production deployment. I've delivered LLM systems and data-intensive platforms across a broad range of industries, from consumer products to regulated enterprise and public-sector environments where responsible AI, governance, and compliance are built into the product from the start.",
   profileImage: "assets/images/profile.jpg",
   stats: [
-    { value: "10+",        label: "years in product leadership" },
+    { value: "12+",        label: "years in product leadership" },
     { value: "$2M+",       label: "bootstrapped at MySphera" },
     { value: "GRAILS '25", label: "best AI ethics project internationally" }
   ]

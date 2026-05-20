@@ -177,6 +177,11 @@ img { display: block; max-width: 100%; }
   border-color:  var(--accent);
 }
 
+/* Hamburger — hidden on desktop, shown on mobile */
+.nav-hamburger {
+  display:        none;
+}
+
 /* Full CV link in nav */
 .tab-btn--cv {
   text-decoration: none;
@@ -935,6 +940,61 @@ footer .container {
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Show hamburger, hide inline nav */
+  .nav-hamburger {
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    gap:             5px;
+    background:      none;
+    border:          none;
+    cursor:          pointer;
+    padding:         0.5rem;
+    margin-left:     auto;
+    flex-shrink:     0;
+    z-index:         201;
+  }
+  .nav-hamburger span {
+    display:       block;
+    width:         22px;
+    height:        2px;
+    background:    var(--accent);
+    border-radius: 2px;
+    transition:    transform 0.25s, opacity 0.25s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  #tab-nav {
+    display:          none;
+    position:         fixed;
+    top:              64px;
+    left:             0;
+    right:            0;
+    flex-direction:   column;
+    background:       var(--surface);
+    border-bottom:    1px solid var(--border);
+    padding:          0.75rem 1rem 1rem;
+    gap:              0.2rem;
+    box-shadow:       0 4px 20px rgba(26, 20, 16, 0.12);
+    z-index:          99;
+  }
+  #tab-nav.open { display: flex; }
+
+  .tab-btn {
+    width:         100%;
+    text-align:    left;
+    border-radius: var(--radius);
+    padding:       0.65rem 1rem;
+  }
+  .tab-btn--cv {
+    margin-left: 0;
+    margin-top:  0.35rem;
   }
 }
 
